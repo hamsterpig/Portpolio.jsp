@@ -1,0 +1,493 @@
+
+*,html,body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-y: hidden; 
+}
+#wrap{
+    width: 100%;
+    height: 100vh;
+}        
+.box{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.myImg{
+    width: 50%;
+    height: 80%;
+    border: 1px solid white;
+    top: 0;
+    left: 25%;
+    position: relative;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 1s;
+
+}
+.boxMyImg{
+    width: 50%;
+    height: 50%;
+    transition: all 1s;
+}
+.profile{
+    width: 90%;
+    height: 90%;
+    left: 90%;
+    position: relative;
+    opacity: 0;
+}    
+.boxProfile{
+    width: 500px;
+    height: 300px;
+}
+
+
+.box:nth-child(1){
+    background-color: midnightblue;
+}
+.bgImg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.box:nth-child(2){
+    padding-top: 7%;
+    background-color: snow;
+
+}
+.boxSection{
+    display: flex;
+    justify-content: center;
+}
+.box:nth-child(3){
+    padding-top: 7%;
+    background-color: #262626;    
+}
+.box:nth-child(4){
+    padding-top: 7%;
+    background-color: white;    
+}
+.box:nth-child(5){
+    padding-top: 7%;
+    background-color: gray;    
+}
+#canvas { /* snow field*/
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+}
+#canvasNav { /* snow field*/
+    position: absolute;
+    width: 100%;
+    height: 10vh;
+    z-index: 0;
+    display: none;
+}
+.welcome{
+    width: 75%;
+    height: 20%;
+    position: relative;
+    margin: auto;
+    top: 5%;
+    border-radius: 50%;
+    text-align:center;
+}
+.welcome div{
+
+}
+
+p.typing-txt{
+    display: none;
+}
+.typing {
+/*       position: absolute;*/ 
+    display: inline-block; 
+    animation-name: cursor; 
+    animation-duration: 0.2s; 
+    animation-iteration-count: infinite; 
+
+    position: relative;
+    top: 35%;
+
+    font-size: 230%;
+    color: black;
+    text-shadow:
+    -1px -1px 0 snow,
+    1px -1px 0 snow,
+    -1px 1px 0 snow,
+    1px 1px 0 snow;
+}
+
+.navTop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 60px;
+    width: 100%;
+    height: 60px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4);
+    background-color: #fff;
+    font-size: 1.1em;
+    z-index: 900;
+    display: flex;
+}
+.navTop a{
+    margin: 1% 20px 20px 0;
+    text-decoration: none;
+    color: black;
+
+}
+.navTop a div{
+    width: 75px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    font-family: sans-serif;
+    font-weight: 700;
+    transition: all 0.813s;
+}
+.navTop a:nth-child(1){
+    color: #82bbb5;
+}
+.navTop a div:hover{
+    background-color: rgba(180,180,180,0.25);
+}
+.navMobile{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 20px;
+    width: 100%;
+    height: 60px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4);
+    background-color: #fff;
+    font-size: 1.1em;
+    z-index: 900;
+    display: flex;
+
+    padding-top: 5px;
+    font-size: 30px;
+    display: none;
+}
+.navMobile a{
+    color: black;
+}
+
+.ListOJ{
+    content: '';
+    display: inline-block;
+    top: 10px;
+    left: 0;
+    width: 20px;
+    height: 10px;
+    background: #82bbb5;
+    transform: rotate(-45deg);
+    border-radius: 10px;
+}
+
+p{
+    margin: 2px 0;
+    font-weight: 500;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+}
+
+.OJ{
+    text-align: center;
+}
+.OJ2{
+    text-align: center;
+    color: snow;
+}
+
+@keyframes cursor{ 
+    0%{border-right: 1px solid #fff}
+    50%{border-right: 1px solid #000}
+    100%{border-right: 1px solid #fff}
+}
+.SectionBar {
+    margin: 0 auto 50px;
+    width: 50px;
+    border-top: 18px solid #de6f44;
+    border-right: 50px solid transparent;
+    border-left: 50px solid transparent;
+}
+
+.SkillSection{
+    display: flex;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 5%;
+    transition: all 1s;
+}
+.SkillLine{
+    width: 200px;
+    height: 210px;
+    margin: 1%;
+    transition: all 1s;
+}
+.SkillBar{
+    height: 10px;
+    width: 150px;
+    background-color: gray;
+    margin: 5px 25px;
+}
+.SkillLevel{
+    height: 10px;
+    width: 10px;
+    background-color: orangered;
+
+}
+
+.icon{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 5px 25px;
+}
+.SkillText{
+    text-align: center;
+    color: snow;
+}
+
+.SkillLine:nth-child(1) > .SkillBar > .SkillLevel{
+
+}
+
+.SectionWrap{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: cornsilk;
+    margin: 0 5%;
+    width: 90%;
+    height: 75vh;
+}
+
+.SectionWrapConcat{ /*  */
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 5% 5%;
+    width: 90%;
+    height: 60vh;
+    padding: 1% 2%;
+    overflow: auto;
+}
+.SectionWrapConcat > div:nth-child(1){ /*  */
+    display: flex;
+    justify-content: space-between;
+    height: 5%;
+    margin-bottom: 0.5%;
+}
+.SectionWrapConcat > div:nth-child(1) > span{ /*  */
+    color: darkslategrey;
+    font-size: 1.2em;
+    font-style: oblique;
+}
+.guestField{
+    width: 100%;
+    height: 100px;
+    margin: 0.5% 0;
+}
+.btnOK{
+    width: 60px;
+}
+.btnReset{
+    width: 70px;
+    margin-right: 1%;
+}
+.guestAction{
+    margin-bottom: 0.5%;
+    display: flex;
+    justify-content: flex-end;
+}
+.guestBox{
+    margin: 1% 0;
+}
+.guestInfo{
+    display: flex;
+    justify-content: space-between;
+    color: dimgray;
+}
+.guestID{
+    color: orangered;
+}
+.guestBoxUp{
+    margin-right: 1%;
+}
+.guestBoxAction{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0.5%;
+    width: 100%;
+}
+
+.upHiden{
+	display: none;
+}
+
+.tel{
+    width: 100%;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+.pf{
+    width: 21%;
+    height: 40%;
+    background-color: white;
+    margin: 2%;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.pf > a > img{
+    width: 95%;
+    height: 80%;
+    position: relative;
+    margin-top: 15%;
+    transition: all 1s;
+}
+.pf > a > img:hover{
+    width: 105%;
+    height: 90%;
+}
+.pf > div{
+        margin: 6px 0 10px;
+        font-size: 1.2em;
+        text-align: center;
+        color: #000;
+}
+
+.pf > a > .pfTag{
+    width: 105%;
+    height: 90%;
+    z-index: 1;
+    background-color: rgba(100,255,100,0.5);
+    position:absolute;
+}
+
+@media(max-width:900px){ /* Mobile */
+
+    .typing{
+        font-size: 180%;
+    }
+    .welcome{
+        height: 20%;
+    }
+    .boxMyImg{
+
+    }
+
+    .box:nth-child(2){
+        padding-top: 15%;
+    }
+    .box:nth-child(3){
+        padding-top: 15%;
+    }
+    .box:nth-child(4){
+        padding-top: 15%;
+    }
+    .box:nth-child(5){
+        padding-top: 15%;
+    }
+    .boxSection{
+        flex-direction: column;
+        padding-top: 0;
+    }
+
+    .myImg{
+        width: 260px;
+        height: 260px;
+    }
+    .boxMyImg{
+        height: 300px;
+    }
+    .navTop a div{
+        width:70px;
+    }
+    .pf{
+        width: 29%;
+        height: 40%;
+    }
+
+}
+
+@media(max-width:760px){ /* change NavBar */
+    .navTop{
+        display: none;
+    }
+    .navMobile{
+        display: flex;
+    }
+}
+
+@media(max-width:700px){ /* small */
+
+    .typing{
+        font-size: 160%;
+    }
+    .welcome{
+        height: 17.5%;
+    }
+
+    .boxMyImg{
+        height: 220px;
+    }
+    .myImg{
+        width: 220px;
+        height: 200px;
+    }
+    .OJ2{
+        display: none;
+    }
+    .box:nth-child(3){
+        padding-top: 0;
+    }
+    .SkillLine{
+        height: 180px;
+    }
+    .icon{
+        width: 110px;
+        height: 110px;
+        margin: 25px 25px;
+    }
+    .pf{
+        width: 45%;
+        height: 40%;
+
+    }
+}
+@media(max-width:650px){
+
+    .typing{
+        font-size: 120%;
+    }
+    .welcome{
+        height: 15%;
+    }
+    .box:nth-child(2){
+        padding-top: 23%;
+    }
+    .box:nth-child(3){
+        padding-top: 0;
+    }
+    .box:nth-child(4){
+        padding-top: 23%;
+    }
+    .box:nth-child(5){
+        padding-top: 23%;
+    }
+}
